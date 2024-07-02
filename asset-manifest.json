@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kalkya/static/css/main.8c6f7f37.css",
+    "main.js": "/kalkya/static/js/main.d98038d5.js",
+    "index.html": "/kalkya/index.html",
+    "main.8c6f7f37.css.map": "/kalkya/static/css/main.8c6f7f37.css.map",
+    "main.d98038d5.js.map": "/kalkya/static/js/main.d98038d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c6f7f37.css",
+    "static/js/main.d98038d5.js"
+  ]
+}
