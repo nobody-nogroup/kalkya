@@ -1,0 +1,24 @@
+/* src/App.css */
+.App {
+}
+
+.section {
+float: left;
+    background-color: blue;
+    height: 100vh;
+    width: 33%;
+
+}
+
+.section1 {
+    background-color: grey;
+}
+
+.section2 {
+      background-color: yellow;
+}
+
+.section3 {
+     background-color: green;
+
+}
