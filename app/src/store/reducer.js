@@ -12,7 +12,7 @@ const rootReducer = (state = initState, action) => {
       console.log("hambe")
       return {
         ...state,
-        items : action.payload.items,
+        items : action,
       };
     default:
       return state;

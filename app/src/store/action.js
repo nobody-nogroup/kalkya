@@ -1,18 +1,23 @@
+import axios from "axios";
 import {useDispatch} from "react-redux";
-import myData from './data.json';
 
 export const INIT_LOAD = "INIT_LOAD";
 
 export const loadInitStore = () => {
 console.log(2);
   return (dispatch) => {
+    const json = axios.get("data.json");
+
+//     axios.get('data.json')
+//        .then(res => console.log(res.data))
+//        .catch(err => console.log(err))
 
     console.log(2.1);
-    console.log(myData);
+    console.log(json);
 
     dispatch({
           type: INIT_LOAD,
-          payload: myData,
+          payload: json.data,
         });
   };
 };

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import { loadInitStore } from './store/action';
 import { RandomBetween } from './utils/utils';
+import myData from './store/data.json'
 
 //TODO code reuse between divs
 //TODO fetch from json file
@@ -11,12 +12,12 @@ import { RandomBetween } from './utils/utils';
 function App() {
   //using a global app state from store
 
-  const data = useSelector((state) => state.items);
+  const data = useSelector((state) => myData.items);
 
   const dispatch = useDispatch();
 
   console.log(1);
-  useEffect(() => dispatch(loadInitStore()), []);
+//  useEffect(() => dispatch(loadInitStore()), []);
   console.log(3);
 
   //using a local state for the component
