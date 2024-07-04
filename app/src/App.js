@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
-import { fetchData } from './store/action';
+import { loadInitStore } from './store/action';
 import { RandomBetween } from './utils/utils';
 
 //TODO code reuse between divs
+//TODO fetch from json file
+//TODO show pic of meal
 
 function App() {
   //using a global app state from store
+
   const data = useSelector((state) => state.items);
+
+  const dispatch = useDispatch();
+
+  console.log(1);
+  useEffect(() => dispatch(loadInitStore()), []);
+  console.log(3);
+
   //using a local state for the component
   const [index1, setIndex1] = useState(0);
   const [index2, setIndex2] = useState(0);
@@ -27,6 +37,11 @@ function App() {
        setIndex3(newIndex);
   }
 
+  console.log(data);
+
+  if(data === undefined){
+   return <div><h1>loading...</h1> </div>
+  }else{
   return (
     <div className="App">
       <div className="section section1" onClick={moveIndex1}>
@@ -43,6 +58,7 @@ function App() {
                   </div>
     </div>
   );
+  }
 }
 
 export default App;

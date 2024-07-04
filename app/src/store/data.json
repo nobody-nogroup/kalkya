@@ -1,12 +1,12 @@
-[
-  {
-    "section1": "1",
-    "section2": "2",
-    "section3": "3"
-  },
-  {
-    "section1": "11",
-    "section2": "22",
-    "section3": "33"
-  }
-]
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Bhel Puri"
+    },
+    {
+      "id": 2,
+      "name": "Mango Shake"
+    }
+  ]
+}

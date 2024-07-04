@@ -1,27 +1,19 @@
-import { FETCH_DATA_SUCCESS } from './action';
+import { INIT_LOAD } from './action';
 
-const referenceData = {
-  items: [
-    {
-      id: 1,
-      name: "Bhel Puri",
-      completed: false,
-    },
-    {
-      id: 2,
-      name: "Mango Shake",
-      completed: false,
-    },
-  ],
-};
+const initState = undefined;
 
 
-const rootReducer = (state = referenceData, action) => {
-  switch (action.type) {
-    case FETCH_DATA_SUCCESS:
+const rootReducer = (state = initState, action) => {
+
+     console.log("in red");
+     console.log(action)
+
+   switch (action.type) {
+    case INIT_LOAD:
+      console.log("hambe")
       return {
         ...state,
-        ...action.payload,
+        items : action.payload.items,
       };
     default:
       return state;
